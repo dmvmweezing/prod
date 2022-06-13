@@ -42,4 +42,4 @@ spec:
       port: 5051  #de pod open poort 5051 als connectie
       targetPort: 5001
       #setting2 voor een external toegang
-#      nodePort: 30501  #moet tussen 30000 en 32767 liggen
+      nodePort: 30501  #moet tussen 30000 en 32767 liggen
