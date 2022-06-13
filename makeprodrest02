@@ -1,4 +1,4 @@
-FROM dockerkarelh/kdh-rest02-prodv01
+FROM dockerkarelh/kdh-restserv-dev
 LABEL maintainer="ISM_HAN"
 
 #Om zeker te zijn dat niets interactief draait
