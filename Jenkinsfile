@@ -1,11 +1,5 @@
 node {
-    
-    stage("Git Clone"){
-
-        git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/dmvmweezing/prod.git'
-    }
-
-    
+     
     stage("Docker build"){
         sh 'docker version'
         sh 'docker build -t prodrest01 -f makeprodrest01 .'
