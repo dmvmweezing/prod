@@ -1,5 +1,5 @@
 #DF voor een ubuntu apache server
-FROM dockerkarelh/kdhapaserv-dev22
+FROM dockerkarelh/kdh-testwebsite-prodv01
 LABEL maintainer="ISM_HAN"
 
 #Om zeker te zijn dat niets interactief draait
