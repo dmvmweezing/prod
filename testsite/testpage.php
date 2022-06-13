@@ -32,7 +32,7 @@
 </head>
 
 <body>
-   <h1>Testapplicatie voor DEVOPS, VERSIE-01</h1>
+   <h1>Testapplicatie voor DEVOPS, VERSIE-01 HELLO world</h1>
    <table style="width:100%"">
      <tr>
        <?php
