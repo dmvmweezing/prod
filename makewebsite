@@ -1,0 +1,13 @@
+#DF voor een ubuntu apache server
+FROM dockerkarelh/kdhapaserv-dev22
+LABEL maintainer="ISM_HAN"
+
+#Om zeker te zijn dat niets interactief draait
+ARG DEBIAN_FRONTEND=noninteractive
+
+#PROD VERSIE: Kopieer alles wat in de testsite directory staat 
+#naar de html dir in het image
+COPY testsite/ /var/www/html/
+
+#het start commando
+CMD /usr/sbin/apache2ctl -D FOREGROUND

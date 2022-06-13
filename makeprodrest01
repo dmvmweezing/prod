@@ -1,0 +1,12 @@
+FROM dockerkarelh/kdh-restserv-dev
+LABEL maintainer="ISM_HAN"
+
+#Om zeker te zijn dat niets interactief draait
+ARG DEBIAN_FRONTEND=noninteractive
+
+#PROD VERSIE: Kopieer de laatste versie 
+#naar /restservice op het image
+COPY rest01/ /restservice/
+
+#deze restservice luistert op poort 5001
+CMD python3 /restservice/restservice.py

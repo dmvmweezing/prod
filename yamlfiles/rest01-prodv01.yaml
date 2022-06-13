@@ -1,0 +1,45 @@
+#DEPLOYMENT DEFINITION FOR REST01
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest01-prodv01-dep
+  namespace: productie
+  labels:
+    app: rest01       #XXX
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rest01    #XXX
+  template:
+    metadata:
+      labels:
+        app: rest01   #XXX
+    spec:
+      containers:
+      - name: rest01  
+        image: dockerkarelh/kdh-rest01-prodv01
+        ports:
+        - containerPort: 5001 #not the standard 5000 port
+      
+
+
+#dit betekent hier komt een nieuwe YAML-file
+---
+
+#SERVICE DEFINITION FOR REST01  
+apiVersion: v1
+kind: Service
+metadata:
+  name: rest01-prodv01-serv
+  namespace: productie
+spec:
+  selector: #om te linken naar een Deployment
+    app: rest01      #XXX
+#  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 5051  #de pod open poort 5051 als connectie
+      targetPort: 5001
+      #setting2 voor een external toegang
+#      nodePort: 30501  #moet tussen 30000 en 32767 liggen

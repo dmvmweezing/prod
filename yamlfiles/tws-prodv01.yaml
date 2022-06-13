@@ -1,0 +1,45 @@
+#DEPLOYMENT DEFINITION FOR testwebsite
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testwebsite-dep
+  namespace: productie
+  labels:
+    app: tws       #XXX
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tws    #XXX
+  template:
+    metadata:
+      labels:
+        app: tws   #XXX
+    spec:
+      containers:
+      - name: tws  
+        image: dockerkarelh/kdh-testwebsite-prodv01
+        ports:
+        - containerPort: 80 #the standard 80 port
+       
+
+#dit betekent hier komt een nieuwe YAML-file
+---
+
+#SERVICE DEFINITION FOR REST02  
+apiVersion: v1
+kind: Service
+metadata:
+  name: testwebsite-serv
+  namespace: productie
+spec:
+  selector: #om te linken naar een Deployment
+    app: tws      #XXX
+  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 8080  #de pod open poort 8080 als connectie
+      targetPort: 80
+      #setting2 voor een external toegang
+      nodePort: 30085  #moet tussen 30000 en 32767 liggen
+      
