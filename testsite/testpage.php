@@ -8,8 +8,7 @@
     {
       if($_POST['txt_naam']!="" && $_POST['txt_password']!="")
       {
-        $url="http://rest01-prodv01-serv:5051/valideer/" . $_POST['txt_naam'] . "/" . $_POST['txt_password'];
-       // $url="http://10.43.166.250:5051/valideer/" . $_POST['txt_naam'] . "/" . $_POST['txt_password'];
+        $url="http://10.43.166.250:5051/valideer/" . $_POST['txt_naam'] . "/" . $_POST['txt_password'];
         $html1=file_get_contents($url);
       }
       else
@@ -19,10 +18,10 @@
     }
   if($focus==2)
    {
-     $url="http://rest02-prodv01-serv:5052/hoofdstad/" . $_POST['txt_land'];
-     // $url="http://10.43.199.202:5052/hoofdstad/" . $_POST['txt_land'];
+     $url="http://10.43.199.202:5052/hoofdstad/" . $_POST['txt_land'];
      $html2="hoofdstad van " . $_POST['txt_land'] . " is " . file_get_contents($url);
    }
+
 ?>
 
 <!DOCTYPE html>
