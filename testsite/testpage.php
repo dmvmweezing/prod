@@ -46,7 +46,7 @@
        <!-- <td style="border: solid black 1px";>  -->
  
          <div class="form" style="text-align: left; padding:5px;height:200px;">
-            <h2 style="color:blue;">Dit is een testfunctie voor authenticatie</h2>
+            <h2 style="color:blue;">Dit is een testfunctie voor authenticatie en hello world</h2>
             <form method="POST" action="" name="opdracht1" id="opdracht1">
               <input type="hidden" id="opdr1" name="opdr1" value="functieNL">
               <label for="txt_naam">Naam:</label> 
