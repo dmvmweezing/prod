@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: rest02  
-        image: dockerkarelh/kdh-rest02-prodv01
+        image: robcraai/rchub:prodrest02
         ports:
         - containerPort: 5002 #not the standard 5000 port
      
