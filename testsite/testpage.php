@@ -32,7 +32,7 @@
 </head>
 
 <body>
-   <h1>Testapplicatie voor DEVOPS, VERSIE-01 HELLO world</h1>
+   <h1>Testapplicatie voor DEVOPS, VERSIE-01</h1>
    <table style="width:100%"">
      <tr>
        <?php
@@ -46,7 +46,7 @@
        <!-- <td style="border: solid black 1px";>  -->
  
          <div class="form" style="text-align: left; padding:5px;height:200px;">
-            <h2 style="color:blue;">Dit is een testfunctie voor authenticatie en hello world</h2>
+            <h2 style="color:blue;">Dit is een testfunctie voor authenticatie</h2>
             <form method="POST" action="" name="opdracht1" id="opdracht1">
               <input type="hidden" id="opdr1" name="opdr1" value="functieNL">
               <label for="txt_naam">Naam:</label> 
