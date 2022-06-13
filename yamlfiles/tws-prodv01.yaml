@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: tws  
-        image: dockerkarelh/kdh-testwebsite-prodv01
+        image: webservice
         ports:
         - containerPort: 80 #the standard 80 port
        
