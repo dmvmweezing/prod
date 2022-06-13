@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: tws  
-        image: robcraai/rchub:webservice
+        image: dockerkarelh/kdh-testwebsite-prodv01
         ports:
         - containerPort: 80 #the standard 80 port
        
